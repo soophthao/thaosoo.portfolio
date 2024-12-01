@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Soo's Portfolio</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/web-10.png" rel="icon">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Monsieur+La+Doulaise&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/lightbox/css/lightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/owl.carousel.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/owl.theme.default.css" rel="stylesheet" type="text/css">
+
+
+  <!-- Main CSS -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    body {
+        position: relative;
+        cursor: none;
+    }
+p {
+  font-family:"Unbounded";
+}
+
+li{
+  font-family:"Unbounded";
+}
+    .trail {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background-color: rgb(89, 236, 252);
+        clip-path: polygon(
+        50% 0%, 
+        61% 35%, 
+        98% 35%, 
+        68% 57%, 
+        79% 91%, 
+        50% 70%, 
+        21% 91%, 
+        32% 57%, 
+        2% 35%, 
+        39% 35%
+    );
+        pointer-events: none;
+        transition: transform 0.1s ease-out, background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(255, 255, 255);
+        font-size: 14px;
+        font-weight: bold;
+        mix-blend-mode: difference;
+          z-index: 9999;
+      /* Animation for light shaking effect */
+      animation: shake 1s ease-in-out infinite;
+}
+
+/* Define the keyframes for the shake animation */
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+</style>
+
+</head>
+
+<body class="index-page">
+<script>
+    const numTrails = 10;
+    const trails = [];
+    const trail = document.createElement('div');
+    trail.classList.add('trail');
+
+    document.body.appendChild(trail);
+
+    let mouseX = 0;
+    let mouseY = 0;
+
+    window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX + window.scrollX; // Cộng với cuộn trang ngang
+        mouseY = e.clientY + window.scrollY;
+    });
+
+    function animateTrails() {
+        trail.style.top = `${(mouseY - trail.offsetWidth / 2)}px`;
+        trail.style.left = `${(mouseX - trail.offsetHeight / 2)}px`;
+        requestAnimationFrame(animateTrails);
+    }
+    setInterval(animateTrails, 100);
+
+
+    
+  window.addEventListener('scroll', function() {
+    const header = document.querySelector('.header');
+    
+    // Kiểm tra nếu vị trí cuộn lớn hơn một giá trị nhất định (ví dụ 10px)
+    if (window.scrollY > 10) {
+      header.classList.add('scrolled');  // Thêm lớp 'scrolled' khi cuộn
+    } else {
+      header.classList.remove('scrolled');  // Loại bỏ lớp 'scrolled' khi chưa cuộn
+    }
+  });
+
+
+ 
+
+</script>
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+        <h2>SOO'S PORTFOLIO</h2>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home<br></a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><img src="assets/img/star-10.png" class="img"></li>
+          
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="assets/img/phas pot-01.jpg">
+
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+          <div class="col-md-6">
+
+            <div class="row justify-content-between gy-4">
+              <div class="col-lg-12">
+           <img src="assets/img/about-11.jpg" class="img-fluid">
+           </div>
+        
+            </div>
+
+        <div class="skills-content skills-animation">
+
+          </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="about-me">
+              <h4>ABOUT ME</h4>
+              <p>
+                Hello! I'm a graphic designer who believes that every design tells a story. With a strong focus on creativity and originality, I aim to create impactful visuals that connect with audiences.
+              </p>
+              <p>I enjoy experimenting with different styles and techniques, always seeking to learn and grow in my craft. Design is my language, and I’m excited to share my journey with you through my work!</p>
+              <div data-aos="fade-up">
+                <br>
+                <h5>SKILLS</h5>
+              </div>
+              <img src="assets/img/SKILL-11.jpg" data-aos="fade-up" class="img-fluid">
+        
+                    </div>
+                  
+                </div>
+
+            </div>
+          </div>
+        </div>
+        
+        
+
+      </div>
+
+    </section><!-- EndAbout Section -->
+    <!-- Education Resume Section -->
+    <section id="resume" class="resume section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>EDUCATION</h2>
+  </div>
+
+  <div class="container">
+
+    <div class="row">
+
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <h4 class="resume-title">Arena Multimedia</h4>
+          <div class="resume-item pb-0">
+          <h5>Graphic Design</h5>
+        <li>2023 - Present</li>
+         </ul>
+          </div><!-- End Resume Item -->
+          </div>
+
+    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+      <h4 class="resume-title">HCM University of Banking</h4>
+      <div class="resume-item pb-0">
+      <h5>Business English</h5>
+          <li>2019 - 2023</li>
+              </ul>  </div>
+          </div>
+      <!-- Section Title -->
+     
+<!-- End ABOUT SÉCTION -->
+      </div>
+
+    </section><!-- /Resume Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>SERVICES</h2>
+        <br>
+      </div>
+    
+      <!-- Bootstrap Carousel -->
+      <div id="servicesCarousel" class="carousel slide" data-aos="fade-up" data-bs-ride="carousel">
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="1"></button>
+        </div>
+    
+        <!-- Carousel Items -->
+        <div class="carousel-inner">
+          <!-- Row 1 -->
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="service-item text-center">
+                  <div class="icon">
+                    <i class="bi bi-brush"></i>
+                  </div>
+                  <h3>Illustration</h3>
+                  <p>Turning your ideas into charming, one-of-a-kind visuals that leave a lasting impression.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="service-item text-center">
+                  <div class="icon">
+                    <i class="bi bi-chat-quote"></i>
+                  </div>
+                  <h3>Branding</h3>
+                  <p>Crafting logos and visuals that make your brand unforgettable. Let's bring your brand's story to life!</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="service-item text-center">
+                  <div class="icon">
+                    <i class="bi bi-easel"></i>
+                  </div>
+                  <h3>Layout</h3>
+                  <p>Professional layout design for books and magazines, ensuring clear structure, visual appeal, and an engaging reading experience.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Row 2 -->
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="service-item text-center">
+                  <div class="icon">
+                    <i class="bi bi-bounding-box-circles"></i>
+                  </div>
+                  <h3>Graphic Design</h3>
+                  <p>Providing professional visual design solutions that enhance your brand identity, effectively convey your message.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="service-item text-center">
+                  <div class="icon">
+                    <i class="bi bi-camera"></i>  
+                  </div>
+                  <h3>Photography</h3>
+                  <p>High-quality photography services that capture the essence of your brand or project.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="service-item text-center">
+                  <div class="icon">           
+                    <i class="bi bi-box2-heart"></i>     </div>
+                  <h3>Packaging Design</h3>
+                  <p>Innovative packaging designs that combine functionality with aesthetic appeal.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Carousel Navigation -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#servicesCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#servicesCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    
+    <style>
+      /* Carousel Inner Styling */
+      #servicesCarousel .carousel-inner {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+  
+    
+      /* Carousel Control Buttons */
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        background-color: #a80000; /* Màu nút điều hướng */
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+      }
+    
+      .carousel-control-prev-icon:hover,
+      .carousel-control-next-icon:hover {
+        background-color: #ff6666; /* Màu sáng hơn khi hover */
+      }
+    </style>
+    
+    
+    <!-- /Services Section -->
+
+   <!-- Stats Section -->
+<section id="stats" class="stats section accent-background">
+  <img src="assets/img/eye-16.jpg" alt="" data-aos="fade-in">
+  <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4">
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item text-center w-100 h-100">
+          <span data-purecounter-start="0" data-purecounter-end="72" data-purecounter-duration="2" class="purecounter">72</span>
+          <p>Clients</p>
+        </div>
+      </div><!-- End Stats Item -->
+
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item text-center w-100 h-100">
+          <span data-purecounter-start="0" data-purecounter-end="194" data-purecounter-duration="2" class="purecounter">194</span>
+          <p>Projects</p>
+        </div>
+      </div><!-- End Stats Item -->
+
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item text-center w-100 h-100">
+          <span data-purecounter-start="0" data-purecounter-end="54" data-purecounter-duration="2" class="purecounter">54</span>
+          <p>Clients Comeback</p>
+        </div>
+      </div><!-- End Stats Item -->
+
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item text-center w-100 h-100">
+          <span data-purecounter-start="0" data-purecounter-end="11" data-purecounter-duration="2" class="purecounter">11</span>
+          <p>Awards</p>
+        </div>
+      </div><!-- End Stats Item -->
+    </div>
+  </div>
+</section><!-- /Stats Section -->
+
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+        <a href="portfolio-details.html"><h2>PORTFOLIO</h2> </a> <br>
+        <p>My featured projects</p>
+        <u><a href="portfolio-details.html" target="_blank" style="color: black; font-family:Unbounded">More Projects</a></u>
+        
+        <br><br>
+   </div><!-- End Section Title -->
+   <div class="container">
+  <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+ <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="200">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-magazine">Magazine</li>
+            <li data-filter=".filter-photography">Photography</li>
+            <li data-filter=".filter-branding">Branding</li>
+          <li data-filter=".filter-other">Other</li>
+      </ul><!-- End Portfolio Filters -->
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-magazine">
+              <img src="assets/img/portfolio/layout1-12.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Asics X KIRSH Magazine</h4>
+                <p>The best collaboration</p>
+    
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/portfolio/branding 2-13.jpg" class="img-fluid">
+              <div class="portfolio-info">
+                <h4>4 PHƯƠNG 8 HƯỚNG</h4>
+                <p>Trại Hè 4 Phương 8 Hướng Anh Em 1 Nhà</p>
+            
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Xắn</h4>
+                <p>Bạn đã ăn sáng no chưa?</p>
+          
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-photography">
+              <img src="assets/img/portfolio/photo-13.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Dimsum</h4>
+                <p>Photography Concept</p>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+        
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-photography">
+              <img src="assets/img/portfolio/photoo-13.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Photography Concept</h4>
+                <p>Portrait Photography Concept</p>
+                </div>
+            </div><!-- End Portfolio Item -->
+
+            
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/portfolio/pack-02.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>NooNee</h4>
+                <p>Packaging design for NooNee</p>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-other">
+              <img src="assets/img/portfolio/other1-01.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Bottle Little Stars</h4>
+                <p>Illustration Comission</p>
+                  </div>
+            </div><!-- End Portfolio Item -->
+            
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-other">
+              <img src="assets/img/portfolio/other-01.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Powerpuff Girl</h4>
+                <p>Illustration Comission</p>
+     </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-other">
+              <img src="assets/img/portfolio/other-13.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>The one & only Kwon</h4>
+                <p>Photobooth birthday project</p>
+               </div>
+            </div><!-- End Portfolio Item -->
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>PRICING</h2>
+        <br>
+    
+        <p>2024 Service Price List</p>
+        <br>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 gx-lg-5">
+
+          <div class="col-lg-6">
+            <div class="pricing-item d-flex justify-content-between">
+              <h3>Portrait Photography</h3>
+              <h4>~1.000.000vnđ</h4>
+            </div>
+          </div><!-- End Pricing Item -->
+
+          <div class="col-lg-6">
+            <div class="pricing-item d-flex justify-content-between">
+              <h3>Food Photography</h3>
+              <h4>~1.000.000vnđ</h4>
+            </div>
+          </div><!-- End Pricing Item -->
+
+          <div class="col-lg-6">
+            <div class="pricing-item d-flex justify-content-between">
+              <h3>Branding</h3>
+              <h4>~5.000.000vnđ</h4>
+            </div>
+          </div><!-- End Pricing Item -->
+
+          <div class="col-lg-6">
+            <div class="pricing-item d-flex justify-content-between">
+              <h3>Packaging Design</h3>
+              <h4>~2.000.000vnđ</h4>
+            </div>
+          </div><!-- End Pricing Item -->
+
+          <div class="col-lg-6">
+            <div class="pricing-item d-flex justify-content-between">
+              <h3>Magazine Layout</h3>
+              <h4>~2.000.000vnđ</h4>
+            </div>
+          </div><!-- End Pricing Item -->
+
+          <div class="col-lg-6">
+            <div class="pricing-item d-flex justify-content-between">
+              <h3>Graphic Design</h3>
+              <h4>~1.000.000vnđ</h4>
+            </div>
+          </div><!-- End Pricing Item -->
+  </div>
+
+    </section><!-- /Pricing Section -->
+
+    <!-- Faq Section -->
+    <section id="faq" class="faq section">
+
+      <div class="container">
+        
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        
+            <div class="content px-xl-5">
+              <h3><span><strong>Special</strong> Mascot Design Set </span></h3>
+              <p>
+              This service is only available with the Branding service
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="faq-container">
+              <div class="faq-item">
+                <h3><span class="mascot">1.</span> <span>ONE character design </span></h3> 
+                <div class="faq-content">
+                  
+                <p>A character with Emojis</p>
+                  <p><img src="assets/img/portfolio/mascot-12.jpg"></p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span class="mascot">1.</span> <span>MULTI-character design </span></h3> 
+                <div class="faq-content">
+                  
+                <p>Characters with Emojis</p>
+                  <p><img src="assets/img/portfolio/mascot 2-12.jpg"></p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+            </div>
+      </div>
+
+    </section><!-- /Faq Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section accent-background">
+
+      <img src="assets/img/portfolio/bien.jpg" class="testimonials-bg">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testi-3.jpg" class="testimonial-img" >
+                <h3>Faker Lee Sanghyeok</h3>
+                <h4>Pro Gamer</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Beautiful design, careful and especially she owns a WORLD 2024 cup
+                    <br>I will certainly return to utilize her exceptional services again.
+                  </span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testi-4.jpg" class="testimonial-img">
+                <h3>J97</h3>
+                <h4>Singer - Composer</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Excellent service, on time, reasonable prices, and I hope in the future, when you gaze upon the sky, you will find a star named J97 shining above</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testi-5.jpg" class="testimonial-img">
+                <h3>Đỗ Phú Quí</h3>
+                <h4>Pickleball court Owner</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Advantages:Highly dedicated, meticulous in design, and demonstrates excellent communication skills. I am confident I will return to utilize her services again.
+                  </span> <br>
+                  <span>Disadvantages: Make an appointment to go Pickaball but don't know how to play
+                  </span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testi-2.jpg" class="testimonial-img" >
+                <h3>Min Hee-jin</h3>
+                <h4>Former ADOR COO </h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>I am acquainted with her through my close friend, Mr. Bang Shihyuk. 
+                    <br>She possesses agility, a keen understanding of trends, and a passion for art. I hold her capabilities in high regard.
+                  </span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testi-1.jpg" class="testimonial-img" >
+                <h3>Bang Shihyuk</h3>
+                <h4>HYBE CEO</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Her service was exceptionally professional, and I am thoroughly satisfied with the results. I will definitely continue to engage her services in the future.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>CONTACT</h2>
+        <br>
+        <p>Let me transform your ideas into stunning designs that communicate your vision.</p>
+        <br>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="info-wrap" data-aos="fade-up" data-aos-delay="200">
+          <div class="row gy-5">
+
+            <div class="col-lg-4">
+              <div class="info-item d-flex align-items-center">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Address</h3>
+                  <p>65 Trần Não</p>
+                </div>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="col-lg-4">
+              <div class="info-item d-flex align-items-center">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Phone</h3>
+                  <p>0123456789</p>
+                </div>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="col-lg-4">
+              <div class="info-item d-flex align-items-center">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email</h3>
+                  <p>soo@gmail.com</p>
+                </div>
+              </div>
+            </div><!-- End Info Item -->
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer accent-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p> <span>NGUYỄN PHƯƠNG THẢO</span></p>
+        <br> <p> soo</p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.behance.net/phuongthao151"target="_blank"><i class="bi bi-behance"></i></a>
+        <a href="https://www.facebook.com/ngphthaosu/"target="_blank"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/susoo._/"target="_blank"><i class="bi bi-instagram"></i></a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/lightbox/js/lightbox.min.js"></script><!-- MASCOT-->
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script> <!-- MASCOT-->
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <script>
+
+$(document).ready(function(){ //star
+  $(".btn-toggle").click(function(){
+    $("#menu").slideToggle("slow");
+  });
+});
+
+
+    const carousel = document.getElementById('servicesCarousel');
+  
+    // Cấu hình chạy tự động
+    const carouselInterval = new bootstrap.Carousel(carousel, {
+      interval: 7000, // Chạy tự động mỗi 7 giây
+      touch: true, // Hỗ trợ trượt trên thiết bị cảm ứng
+    });
+  
+    // Dừng khi trỏ chuột
+    carousel.addEventListener('mouseenter', () => {
+      carouselInterval.pause();
+    });
+    
+  
+    // Tiếp tục khi rời chuột
+    carousel.addEventListener('mouseleave', () => {
+      carouselInterval.cycle();
+    });
+  </script>
+  
+  
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
